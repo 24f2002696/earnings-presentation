@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3 Earnings Report - Financial Institution</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Slide 1: Title -->
+            <section>
+                <h1>Q3 Earnings Report</h1>
+                <h3>Financial Institution 2024</h3>
+                <p><small>Presented by: 24f2002696@ds.study.iitm.ac.in</small></p>
+                <aside class="notes">
+                    Welcome everyone to our Q3 earnings presentation. This report covers our financial performance.
+                </aside>
+            </section>
+
+            <!-- Slide 2: Markdown Slide -->
+            <section data-markdown>
+                <textarea data-template>
+## Executive Summary
+
+- Revenue increased by **15%** YoY
+- Operating margin improved to **23%**
+- Customer acquisition up **8%**
+- Strong performance across all segments
+
+---
+
+## Key Highlights
+
+| Metric | Q3 2024 | Q3 2023 |
+|--------|---------|---------|
+| Revenue | $4.2B | $3.7B |
+| Net Income | $890M | $720M |
+| EPS | $2.45 | $1.98 |
+                </textarea>
+            </section>
+
+            <!-- Slide 3: Animated Fragments -->
+            <section>
+                <h2>Strategic Priorities</h2>
+                <ul>
+                    <li class="fragment fade-in">Digital Transformation</li>
+                    <li class="fragment fade-in">Market Expansion</li>
+                    <li class="fragment fade-in">Cost Optimization</li>
+                    <li class="fragment fade-up">Customer Experience Enhancement</li>
+                </ul>
+                <aside class="notes">
+                    Walk through each priority one by one. Emphasize digital transformation as the key driver.
+                </aside>
+            </section>
+
+            <!-- Slide 4: Code Sample with Syntax Highlighting -->
+            <section>
+                <h2>Financial Analysis Code</h2>
+                <pre><code class="python" data-line-numbers="1-2|4-5|7-8">
+import pandas as pd
+import numpy as np
+
+# Calculate quarterly growth
+growth_rate = (current_q - previous_q) / previous_q
+
+# Compound Annual Growth Rate
+cagr = (ending_value / beginning_value) ** (1/years) - 1
+                </code></pre>
+                <aside class="notes">
+                    This code demonstrates how we calculate key financial metrics programmatically.
+                </aside>
+            </section>
+
+            <!-- Slide 5: Mathematical Equations -->
+            <section>
+                <h2>Financial Formulas</h2>
+                <p>Compound Interest Formula:</p>
+                \[A = P\left(1 + \frac{r}{n}\right)^{nt}\]
+                <p class="fragment">Net Present Value:</p>
+                <p class="fragment">\[NPV = \sum_{t=0}^{n} \frac{C_t}{(1+r)^t}\]</p>
+                <p class="fragment">Return on Investment:</p>
+                <p class="fragment">\[ROI = \frac{Gain - Cost}{Cost} \times 100\%\]</p>
+                <aside class="notes">
+                    These are the core formulas used in our financial analysis and projections.
+                </aside>
+            </section>
+
+            <!-- Slide 6: Conclusion -->
+            <section>
+                <h2>Q4 Outlook</h2>
+                <div class="fragment">
+                    <p>📈 Projected Revenue Growth: <strong>12-15%</strong></p>
+                </div>
+                <div class="fragment">
+                    <p>🎯 Focus: Sustainable profitability</p>
+                </div>
+                <div class="fragment">
+                    <h3>Thank You!</h3>
+                    <p>Contact: 24f2002696@ds.study.iitm.ac.in</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
+        });
+    </script>
+</body>
+</html>
