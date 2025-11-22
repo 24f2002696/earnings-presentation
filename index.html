@@ -4,14 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="24f2002696@ds.study.iitm.ac.in">
-    <meta name="description" content="Q3 Earnings Report by 24f2002696@ds.study.iitm.ac.in">
     <title>Q3 Earnings Report - 24f2002696@ds.study.iitm.ac.in</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai-sublime.min.css">
+    <style>
+        .reveal pre code {
+            max-height: 500px;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-    <!-- Author: 24f2002696@ds.study.iitm.ac.in -->
     <div class="reveal">
         <div class="slides">
             
@@ -23,7 +27,7 @@
                 <p><strong>24f2002696@ds.study.iitm.ac.in</strong></p>
                 <p>Email: 24f2002696@ds.study.iitm.ac.in</p>
                 <aside class="notes">
-                    Speaker: 24f2002696@ds.study.iitm.ac.in - Welcome everyone to our Q3 earnings presentation.
+                    Speaker: 24f2002696@ds.study.iitm.ac.in
                 </aside>
             </section>
 
@@ -37,7 +41,6 @@ Prepared by: 24f2002696@ds.study.iitm.ac.in
 - Revenue increased by **15%** YoY
 - Operating margin improved to **23%**
 - Customer acquisition up **8%**
-- Strong performance across all segments
 
 ---
 
@@ -47,7 +50,6 @@ Prepared by: 24f2002696@ds.study.iitm.ac.in
 |--------|---------|---------|
 | Revenue | $4.2B | $3.7B |
 | Net Income | $890M | $720M |
-| EPS | $2.45 | $1.98 |
 
 Contact: 24f2002696@ds.study.iitm.ac.in
                 </textarea>
@@ -60,114 +62,106 @@ Contact: 24f2002696@ds.study.iitm.ac.in
                     <li class="fragment fade-in">Digital Transformation</li>
                     <li class="fragment fade-in">Market Expansion</li>
                     <li class="fragment fade-in">Cost Optimization</li>
-                    <li class="fragment fade-up">Customer Experience Enhancement</li>
+                    <li class="fragment fade-up">Customer Experience</li>
                 </ul>
-                <p class="fragment">Analyst: 24f2002696@ds.study.iitm.ac.in</p>
+                <p class="fragment">24f2002696@ds.study.iitm.ac.in</p>
                 <aside class="notes">
-                    Presented by 24f2002696@ds.study.iitm.ac.in - Walk through each priority one by one.
+                    Walk through priorities - 24f2002696@ds.study.iitm.ac.in
                 </aside>
             </section>
 
-            <!-- Slide 4: Code Sample with Syntax Highlighting -->
+            <!-- Slide 4: Python Code with Syntax Highlighting -->
             <section>
-                <h2>Financial Analysis Code</h2>
-                <pre><code data-trim data-noescape class="hljs python">
-# Author: 24f2002696@ds.study.iitm.ac.in
+                <h2>Python Analysis</h2>
+                <pre><code class="python" data-trim data-line-numbers>
+# Financial Analysis by 24f2002696@ds.study.iitm.ac.in
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
-def calculate_growth(current_q, previous_q):
-    """Calculate quarterly growth rate"""
-    growth_rate = (current_q - previous_q) / previous_q
-    return growth_rate * 100
+def calculate_quarterly_growth(current, previous):
+    """Calculate growth rate between quarters"""
+    if previous == 0:
+        return 0
+    return ((current - previous) / previous) * 100
 
-# Compound Annual Growth Rate
-def calculate_cagr(ending_value, beginning_value, years):
-    cagr = (ending_value / beginning_value) ** (1/years) - 1
-    return cagr
+def calculate_cagr(start_value, end_value, years):
+    """Compound Annual Growth Rate"""
+    return (pow(end_value / start_value, 1/years) - 1) * 100
+
+# Example usage
+q3_revenue = 4.2  # billion
+q2_revenue = 3.9  # billion
+growth = calculate_quarterly_growth(q3_revenue, q2_revenue)
+print(f"Q3 Growth: {growth:.2f}%")
                 </code></pre>
-                <aside class="notes">
-                    Code by 24f2002696@ds.study.iitm.ac.in - This demonstrates financial metric calculations.
-                </aside>
             </section>
 
-            <!-- Slide 5: Additional Code Example -->
+            <!-- Slide 5: JavaScript Code with Syntax Highlighting -->
             <section>
                 <h2>JavaScript Implementation</h2>
-                <pre><code data-trim data-noescape class="hljs javascript">
-// Financial Calculator - 24f2002696@ds.study.iitm.ac.in
-function calculateROI(gain, cost) {
-    return ((gain - cost) / cost) * 100;
+                <pre><code class="javascript" data-trim data-line-numbers>
+// ROI Calculator - 24f2002696@ds.study.iitm.ac.in
+class FinancialCalculator {
+    constructor(initialInvestment) {
+        this.investment = initialInvestment;
+    }
+
+    calculateROI(finalValue) {
+        const gain = finalValue - this.investment;
+        return (gain / this.investment) * 100;
+    }
+
+    calculateNPV(cashFlows, discountRate) {
+        return cashFlows.reduce((npv, cf, t) => {
+            return npv + cf / Math.pow(1 + discountRate, t);
+        }, 0);
+    }
 }
 
-function calculateNPV(cashFlows, discountRate) {
-    let npv = 0;
-    for (let t = 0; t < cashFlows.length; t++) {
-        npv += cashFlows[t] / Math.pow(1 + discountRate, t);
-    }
-    return npv;
-}
+const calc = new FinancialCalculator(1000000);
+console.log(`ROI: ${calc.calculateROI(1250000)}%`);
                 </code></pre>
             </section>
 
             <!-- Slide 6: Mathematical Equations -->
             <section>
                 <h2>Financial Formulas</h2>
-                <p>Compound Interest Formula:</p>
+                <p>Compound Interest:</p>
                 \[A = P\left(1 + \frac{r}{n}\right)^{nt}\]
                 <p class="fragment">Net Present Value:</p>
                 <p class="fragment">\[NPV = \sum_{t=0}^{n} \frac{C_t}{(1+r)^t}\]</p>
-                <p class="fragment">Return on Investment:</p>
-                <p class="fragment">\[ROI = \frac{Gain - Cost}{Cost} \times 100\%\]</p>
                 <p class="fragment">24f2002696@ds.study.iitm.ac.in</p>
                 <aside class="notes">
-                    Formulas compiled by 24f2002696@ds.study.iitm.ac.in for financial analysis.
+                    Core formulas - 24f2002696@ds.study.iitm.ac.in
                 </aside>
             </section>
 
-            <!-- Slide 7: Conclusion -->
+            <!-- Slide 7: Contact -->
             <section>
-                <h2>Q4 Outlook</h2>
-                <div class="fragment">
-                    <p>📈 Projected Revenue Growth: <strong>12-15%</strong></p>
-                </div>
-                <div class="fragment">
-                    <p>🎯 Focus: Sustainable profitability</p>
-                </div>
-                <div class="fragment">
-                    <h3>Thank You!</h3>
-                    <p>24f2002696@ds.study.iitm.ac.in</p>
-                </div>
-                <aside class="notes">
-                    Closing remarks by 24f2002696@ds.study.iitm.ac.in - Thank the audience.
-                </aside>
-            </section>
-
-            <!-- Slide 8: Contact Information -->
-            <section>
-                <h2>Contact Information</h2>
+                <h2>Thank You!</h2>
                 <h3>24f2002696@ds.study.iitm.ac.in</h3>
                 <p>Email: 24f2002696@ds.study.iitm.ac.in</p>
-                <p>Author: 24f2002696@ds.study.iitm.ac.in</p>
             </section>
 
         </div>
     </div>
 
-    <!-- Presentation by 24f2002696@ds.study.iitm.ac.in -->
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/math/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
     <script>
-        // Presentation by 24f2002696@ds.study.iitm.ac.in
         Reveal.initialize({
             hash: true,
-            highlight: {
-                highlightOnLoad: true
-            },
-            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
+            plugins: [RevealMarkdown, RevealMath.KaTeX, RevealNotes]
+        }).then(() => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
         });
     </script>
 </body>
