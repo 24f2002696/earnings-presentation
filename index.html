@@ -8,6 +8,7 @@
     <meta name="author" content="24f2002696@ds.study.iitm.ac.in">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css">
 </head>
 <body>
     <div class="reveal">
@@ -32,12 +33,11 @@
                     <li class="fragment">Then third item</li>
                 </ul>
             </section>
-                        html<section>
+                        html
+            <section>
                 <h2>Code Example</h2>
-                <pre><code data-trim>
-            function hello() {
-                console.log("Hello World");
-            }
+                <pre><code class="language-python" data-trim>
+                       print("24f2002696@ds.study.iitm.ac.in")
                 </code></pre>
             </section>
         </div>
@@ -47,6 +47,13 @@
     <script>
         Reveal.initialize({
             hash: true,
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            plugins: [ RevealHighlight ]
         });
     </script>
 </body>
